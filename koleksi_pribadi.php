@@ -38,7 +38,7 @@ while ($result = mysqli_fetch_array($query)) {
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <a href="?page=koleksi_tambah" class="btn btn-primary">+ Tambah Data</a>
+                <a href="?page=koleksi_tambah" class="btn btn-danger">+ Tambah Data</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <tr>
                         <th>No</th>
@@ -48,16 +48,15 @@ while ($result = mysqli_fetch_array($query)) {
                         <th>Penerbit</th>
                         <th>Tahun Terbit</th>
                         <th>Deskripsi</th>
+                        <th>Aksi</th>
 
 
                     </tr>
-                    <?php
-                    $i = 1;
-                    foreach ($row as $book) {
-                    ?>
                         <tr><?php
+                       
+                        $i = 1;
                             // Misalkan ada variabel $isAdmin yang menunjukkan apakah pengguna adalah admin atau tidak
-                            $isAdmin = true; // Anda harus menggantinya dengan logika autentikasi yang sesungguhnya
+                            // $isAdmin = true; // Anda harus menggantinya dengan logika autentikasi yang sesungguhnya
 
                             foreach ($row as $book) {
                             ?>
@@ -69,9 +68,9 @@ while ($result = mysqli_fetch_array($query)) {
                             <td><?php echo $book['tahun_terbit'] ?? ''; ?></td>
                             <td><?php echo $book['deskripsi'] ?? ''; ?></td>
                             <!-- Cek apakah pengguna adalah admin -->
-                            <?php if ($isAdmin) : ?>
+                            <?php if ($_SESSION['user']['level'] == 'peminjam') : ?>
                                 <td>
-                                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?');" href="?page=koleksi_hapus&&id=<?php echo $book['id_koleksi']; ?>" class="btn btn-danger">Hapus</a>
+                                    <a href="?page=koleksi_hapus&&id=<?php echo $book['id_koleksi']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin menghapus data ini?')">Hapus</a>
                                 </td>
                             <?php endif; ?>
                         </tr>
@@ -80,9 +79,6 @@ while ($result = mysqli_fetch_array($query)) {
                     ?>
 
                     </tr>
-                <?php
-                    }
-                ?>
                 </table>
             </div>
         </div>

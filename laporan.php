@@ -4,11 +4,11 @@
 
         <div class="row">
             <div class="col-md-12">
-                <a href="cetak.php" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i> Cetak Data</a>
+                <a href="cetak.php" target="_blank" class="btn btn-danger"><i class="fa fa-print"></i> Cetak Data</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <tr>
                         <th>no</th>
-                        <th>User</th>
+                        <th>Peminjam</th>
                         <th>Buku</th>
                         <th>tanggal Peminjaman</th>
                         <th>tanggal Pengembalian</th>

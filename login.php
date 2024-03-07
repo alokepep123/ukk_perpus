@@ -31,7 +31,7 @@ $conn = $koneksi->getConn();
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Login Perpustakaan Digital</h3>
+                                    <h3 class="text-center font-weight-light my-4">Perpustakaan Digital <br>SMKn 6 Kendari</h3>
                                 </div>
                                 <div class="card-body">
                                     <?php
@@ -67,7 +67,7 @@ $conn = $koneksi->getConn();
                                 </div>
                                 <div class="card-footer text-center py-3">
                                     <div class="small">
-                                        &copy; Ahmad Fauzan UKK
+                                        &copy; Reyfan Al Abidzar
                                     </div>
                                 </div>
                             </div>

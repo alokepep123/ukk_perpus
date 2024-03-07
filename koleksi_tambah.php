@@ -24,7 +24,7 @@
                         }
                         ?>
                       <div class="row mb-3">
-                          <div class="col-md-2">Judul Buku</div>
+                          <div class="col-md-2">Kategori</div>
                           <div class="col-md-8">
                               <select name="id_kategori" class="form-control">
                                   <?php

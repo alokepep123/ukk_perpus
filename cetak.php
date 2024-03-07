@@ -2,9 +2,8 @@
 <table border="1" cellspacing="0" cellpadding="5" width="100%">
             <tr>
                 <th>No</th>
-                <th>User</th>
+                <th>Peminjam</th>
                 <th>Buku</th>
-                <th>Ulasan</th>
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
                 <th>Status Peminjaman</th>

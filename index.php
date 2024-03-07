@@ -20,66 +20,72 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-secondary">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Perpustakaan Digital</a>
+        <a class="navbar-brand ps-3" href="index.html">Reyfan al abidzar </a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark bg-secondary" id="sidenavAccordion">
+            <nav class="sb-sidenav accordion sb-sidenav-dark bg-danger" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="?">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-sidenav-menu-heading" style="color: #ffff">Core</div>
+                        <a class="nav-link" href="?" style="color: #ffff">
+                            <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <div class="sb-sidenav-menu-heading">Navigasi</div>
+                        <div class="sb-sidenav-menu-heading" style="color: #ffff">Navigasi</div>
                         <?php
                         if ($_SESSION['user']['level'] != 'peminjam') {
                         ?>
-                            <a class="nav-link" href="?page=kategori">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            <a class="nav-link" href="?page=kategori"  style="color: #ffff">
+                                <div class="sb-nav-link-icon" style="color:#ffff"><i class="fas fa-table"></i></div>
                                 Kategori Buku
                             </a>
 
-                            <a class="nav-link" href="?page=buku">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            <a class="nav-link" href="?page=buku" style="color: #ffff">
+                                <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-book"></i></div>
                                 Buku
                             </a>
                         <?php
                         } else {
                         ?>
-                            <a class="nav-link" href="?page=peminjaman">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            <a class="nav-link" href="?page=peminjaman" style="color: #ffff">
+                                <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-book-open"></i></div>
                                 Peminjaman
                             </a>
                         <?php
                         }
                         ?>
-                        <a class="nav-link" href="?page=ulasan">
-                            <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
+                        <a class="nav-link" href="?page=ulasan" style="color: #ffff">
+                            <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-comment"></i></div>
                             Ulasan
                         </a>
 
                         <?php
                         if ($_SESSION['user']['level'] != 'peminjam') {
                         ?>
-                            <a class="nav-link" href="?page=laporan">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            <a class="nav-link" href="?page=laporan" style="color: #ffff">
+                                <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-book"></i></div>
                                 Laporan Peminjaman
                             </a>
                         <?php
                         }
                         ?>
-                        <a class="nav-link" href="?page=koleksi_pribadi">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                        <?php
+                        if($_SESSION['user']['level'] == 'peminjam'){
+                            ?>
+                        <a class="nav-link" href="?page=koleksi_pribadi" style="color: #ffff">
+                            <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-table"></i></div>
                             Koleksi Pribadi
                         </a>
-                        <a class="nav-link" href="logout.php">
-                            <div class="sb-nav-link-icon"><i class="fas fa-power-off"></i></div>
+                        <?php
+                        }
+                        ?>
+                        <a class="nav-link" href="logout.php" style="color: #ffff">
+                            <div class="sb-nav-link-icon" style="color: #ffff"><i class="fas fa-power-off"></i></div>
                             Logout
                         </a>
                     </div>

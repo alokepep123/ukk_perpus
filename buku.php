@@ -3,7 +3,7 @@
   <div class="card-body">
   <div class="row">
     <div class="col-md-12">
-        <a href="?page=buku_tambah" class="btn btn-primary">+ Tambah Data</a>
+        <a href="?page=buku_tambah" class="btn btn-danger">+ Tambah Data</a>
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <tr>
                 <th>No</th>
@@ -29,7 +29,7 @@
                         <td><?php echo $data['tahun_terbit']; ?></td>
                         <td><?php echo $data['deskripsi']; ?></td>
                         <td>
-                            <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-info">Ubah</a>
+                            <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-danger">Ubah</a>
                             <a onclick="return confirm('Apakah anda yakin menghapus data ini?');" href="?page=buku_hapus&&id=<?php echo $data['id_buku']; ?>" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>

@@ -3,7 +3,13 @@
   <div class="card-body">
   <div class="row">
     <div class="col-md-12">
-        <a href="?page=ulasan_tambah" class="btn btn-primary">+ Tambah Data</a>
+    <?php
+    if($_SESSION['user']['level'] == 'peminjam'){
+    ?>
+        <a href="?page=ulasan_tambah" class="btn btn-danger">+ Tambah Data</a>
+        <?php
+    }
+    ?>
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <tr>
                 <th>No</th>
@@ -25,7 +31,13 @@
                         <td><?php echo $data['ulasan']; ?></td>
                         <td><?php echo $data['rating']; ?></td>
                         <td>
-                            <a href="?page=ulasan_ubah&&id=<?php echo $data['id_ulasan']; ?>" class="btn btn-info">Ubah</a>
+                        <?php
+                        if($_SESSION['user']['level'] == 'peminjam'){
+                            ?>
+                            <a href="?page=ulasan_ubah&&id=<?php echo $data['id_ulasan']; ?>" class="btn btn-danger">Ubah</a>
+                            <?php
+                        }
+                        ?>
                             <a onclick="return confirm('Apakah anda yakin menghapus data ini?');" href="?page=ulasan_hapus&&id=<?php echo $data['id_ulasan']; ?>" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>

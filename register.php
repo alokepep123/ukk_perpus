@@ -75,7 +75,6 @@ include "koneksi.php";
                                             <label for="small mb-1">Level</label>
                                             <select name="level" class="form-control">
                                                 <option value="peminjam">Peminjam</option>
-                                                <option value="admin">Petugas</option>
                                             </select>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
@@ -86,7 +85,7 @@ include "koneksi.php";
                                 </div>
                                 <div class="card-footer text-center py-3">
                                     <div class="small">
-                                        &copy; Ahmad Fauzan UKK
+                                        &copy; Reyfan Al Abidzar
                                     </div>
                                 </div>
                             </div>

@@ -11,6 +11,12 @@
               $tanggal_peminjaman = $_POST['tanggal_peminjaman'];
               $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
               $status_peminjaman = $_POST['status_peminjaman'];
+              // $cek = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE")
+
+              if($tanggal_peminjaman > $tanggal_pengembalian){
+                exit(header("location:?page=peminjaman"));
+              }
+              
               $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku,id_user,tanggal_peminjaman,tanggal_pengembalian,status_peminjaman) values('$id_buku','$id_user','$tanggal_peminjaman','$tanggal_pengembalian','$status_peminjaman') ");
 
               if ($query) {

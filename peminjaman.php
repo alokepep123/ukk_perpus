@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <a href="?page=peminjaman_tambah" class="btn btn-primary"><i class="fa fa-plus"></i>Tambah Peminjaman</a>
+                <a href="?page=peminjaman_tambah" class="btn btn-danger"><i class="fa fa-plus"></i>Tambah Peminjaman</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <tr>
                         <th>No</th>
@@ -30,7 +30,7 @@
                                 <?php
                                 if ($data['status_peminjaman'] != 'dikembalikan') {
                                 ?>
-                                    <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-info">Ubah</a>
+                                    <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">kembalikan</a>
                                     <a onclick="return confirm('Apakah anda yakin menghapus data ini?');" href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a>
                                 <?php
                                 }
